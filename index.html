@@ -1,0 +1,337 @@
+<!----------------------------->
+<!--  Author: HASSAN  --------->
+<!--  Student ID: WEB8-1908  -->
+<!----------------------------->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUMMER SALE</title>
+
+  <!-- import cdn for tailwind & daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Ends -->
+
+  <!-- Import google fonts for Work Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ends -->
+
+  <!-- Configure custom tailwind styles Starts -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-col': '#E527B2',
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Ends -->
+
+  <style>
+    /* Custom css font */
+    .font-work-sans {
+      font-family: 'Work Sans', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-work-sans bg-[#F8F8F8]">
+  <header class="bg-[#F9F6E2]">
+    <!-- Banner starts -->
+    <div class="container mx-auto hero min-h-screen bg-[#F9F6E2]">
+      <div class="hero-content flex-col lg:flex-row-reverse gap-7">
+        <img src="images/Summer-sale.png" class="max-w-sm rounded-lg w-full" />
+        <div class="text-center">
+          <h1 class="text-2xl font-medium">---SALE FEVER---</h1>
+          <p class="text-2xl md:text-4xl font-bold py-1 md:py-6">Purchase TK 200 or <br> above & get <span
+              class="text-primary-col">20%
+              off</span></p>
+          Use Promo Code
+          <button class="bg-primary-col font-semibold text-white py-2 px-5 rounded-md">SELL200</button>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends -->
+  </header>
+
+  <main>
+    <section class="container mx-auto pt-6 lg:pt-32 pb-6 lg:pb-32">
+      <!-- Kitchenware Heading -->
+      <h3 class="hidden md:block font-semibold text-4xl">Kitchenware</h3>
+      <!-- Full Container Starts-->
+      <section class="flex flex-col-reverse md:flex-row gap-3">
+
+        <!-- left/main side: Cards section -->
+        <div class="flex-1 text-center">
+          <!-- Kitchenware Heading special for mobile responsive -->
+          <h3 class="md:hidden font-semibold text-4xl mt-7">Kitchenware</h3>
+          <!-- Kitchenware part starts -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-24">
+
+            <!-- Kitchenware 1st card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/kitchen-1.png" alt="Kitchenware" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">K. Accessories</h2>
+                <p class="text-xl font-normal"><span>39.00</span> TK</p>
+              </div>
+            </div>
+
+            <!-- Kitchenware 2nd card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/kitchen-2.png" alt="Kitchenware" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">K. Accessories</h2>
+                <p class="text-xl font-normal"><span>25.00</span> TK</p>
+              </div>
+            </div>
+
+            <!-- Kitchenware 3rd card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/kitchen-3.png" alt="Kitchenware" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Home Cooker</h2>
+                <p class="text-xl font-normal"><span>49.00</span> TK</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sportswear part starts -->
+          <h3 class="text-center md:text-left font-semibold text-4xl">Sportswear</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-24">
+
+            <!-- Sportswear 1st card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/sports-1.png" alt="Sportswear" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Sports Back Cap</h2>
+                <p class="text-xl font-normal"><span>49.00</span> TK</p>
+              </div>
+            </div>
+
+            <!-- Sportswear 2nd card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/sports-2.png" alt="Sportswear" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Full Jersey Set</h2>
+                <p class="text-xl font-normal"><span>69.00</span> TK</p>
+              </div>
+            </div>
+
+            <!-- Sportswear 3rd card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/sports-3.png" alt="Sportswear" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Sports cates</h2>
+                <p class="text-xl font-normal"><span>159.00</span> TK</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Furniture part starts -->
+          <h3 class="text-center md:text-left font-semibold text-4xl">Furniture</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+            <!-- Furniture 1st card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/furniture-1.png" alt="Furniture" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-blank.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Single Relax Chair</h2>
+                <p class="text-xl font-normal"><span>185.00</span> TK</p>
+              </div>
+            </div>
+
+            <!-- Furniture 2nd card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/furniture-2.png" alt="Furniture" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Children play</h2>
+                <p class="text-xl font-normal"><span>299.00</span> TK</p>
+              </div>
+            </div>
+
+            <!-- Furniture 3rd card -->
+            <div onclick="addItemToCart(this)" class="card bg-[#FFFFFF] rounded-lg">
+              <figure class="bg-[#1111110D] flex justify-center align-middle m-4 rounded-lg py-7">
+                <img src="images/furniture-3.png" alt="Furniture" />
+              </figure>
+              <div class="card-body">
+                <!-- Rating starts -->
+                <div class="flex justify-center">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                  <img src="images/frame-full.svg" alt="">
+                </div>
+                <!-- Rating Ends -->
+                <h2 class="text-xl font-semibold">Flexible Sofa</h2>
+                <p class="text-xl font-normal"><span>339.00</span> TK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side: Calculation Section -->
+        <div class="text-left">
+          <div id="cart-container" class="w-full p-6 bg-[#FFFFFF] rounded-lg mb-7">
+            <h5 class="font-semibold text-2xl">Have coupon?</h5>
+
+            <input type="text" name="" id="coupon" placeholder="Coupon code"
+              class="py-3 md:px-5 border border-[#11111126] border-r-0 rounded-l-lg" disabled>
+
+            <button id="apply-btn"
+              class="-ml-2 bg-primary-col opacity-25 text-white text-lg font-semibold py-3 px-5 rounded-r-lg"
+              disabled>Apply
+            </button>
+          </div>
+          <div class="w-full p-6 bg-[#FFFFFF] rounded-lg">
+            <div id="cart-items-container" class="text-xl font-semibold mt-2 mb-5">
+
+            </div>
+            <h5 class="mt-5 mb-2 pt-3 font-normal text-xl border-t"><span class="font-semibold"> Total price: </span>
+              <span id="total-price">0.00</span> TK
+            </h5>
+
+            <h5 class="mt-2 mb-2 font-normal text-xl"><span class="font-semibold">Discount: </span> <span
+                id="discount">0.00</span> TK
+            </h5>
+
+            <h5 class="mt-2 mb-5 pb-3 font-normal text-xl border-b"><span class="font-semibold">Total: </span> <span
+                id="final-total">0.00</span> TK
+            </h5>
+          </div>
+          <div class="text-center -mt-6">
+            <button id="purchase-btn" onclick="my_modal_1.showModal()"
+              class="w-3/4 bg-primary-col opacity-25 text-white text-lg font-semibold py-3 px-5 rounded-xl"
+              disabled>Make
+              Purchase</button>
+
+            <!-- Modal for Make Purchase Button -->
+            <dialog id="my_modal_1" class="modal">
+              <form method="dialog" class="modal-box">
+                <figure class="overflow-hidden px-10 pt-10 flex justify-center">
+                  <img src="images/congo.png" alt="modal-congo" class="w-28" />
+                </figure>
+                <h2 class="font-extrabold text-4xl mt-6 mb-4">Congratulations</h2>
+                <p class="w-3/4 mx-auto mb-4">You Purchase the product</p>
+
+                <div class="modal-action flex justify-center gap-4 mb-5">
+                  <button onclick="resetWebpage()"
+                    class="bg-primary-col text-white text-lg font-semibold py-3 px-5 rounded-xl hover:bg-white hover:text-primary-col hover:border hover:border-primary-col">Go
+                    Home</button>
+                </div>
+              </form>
+            </dialog>
+            <!-- Modal Ends -->
+
+          </div>
+
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer></footer>
+  <script></script>
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
